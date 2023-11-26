@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Computer Vision final project</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-around;
+  }
+  .section {
+    font-size: 20px;
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 15px;
+    flex-basis: 45%; /* Adjust the width for each box */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  .section-link {
+    text-decoration: none; /* Removes underline from links */
+    color: inherit; /* Ensures the text color is not changed by the link */
+  }
+
+  .section-link:hover .section {
+    background-color: #f5f5f5; /* Example hover effect for the section */
+  }
+
+  .section img {
+    max-width: 100%;
+    height: auto;
+  }
+  .footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .Abstract {
+      font-size: 40px;
+      text-align: center; /* Center align the text */
+      color: #9e0303; /* Change the color (example: red) */
+    }
+
+  .Introduction {
+      font-size: 40px;
+      text-align: center; /* Center align the text */
+      color: #9e0303; /* Change the color (example: red) */
+    }
+
+    .Approaches {
+      font-size: 40px;
+      text-align: center; /* Center align the text */
+      color: #9e0303; /* Change the color (example: red) */
+    }
+
+    .Implementation {
+      font-size: 40px;
+      text-align: center; /* Center align the text */
+      color: #9e0303; /* Change the color (example: red) */
+    }
+    .Results {
+      font-size: 40px;
+      text-align: center; /* Center align the text */
+      color: #9e0303; /* Change the color (example: red) */
+    }
+
+    .justified {
+            text-align: justify; /* Justifies the paragraph text */
+            margin-left: auto;   /* These two lines center the paragraph block */
+            margin-right: auto;
+            max-width: 1200px;    /* You can adjust this value as per your design needs */
+            font-size: 22px;     /* Increased font size */
+            line-height:1.6;
+        }
+
+    html {
+    scroll-behavior: smooth;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>A Comparative Study of Vehicle Detection and Tracking: Deep Learning vs.Traditional Methods
+</h1>
+<h2> Team Members: Diksha Aggarwal and Surafel Anshebo</h2>
+<h2> Fall 2023 ECE 4554/5554 Computer Vision: Course Project</h2>
+<h2> Virginia Tech</h2>
+
+</div>
+<br></br>
+
+<div class="container">
+    <div class="section">
+        <h2>1. Abstract</h2>
+        <p>Motivation behind the problem, approaches and results obtained.</p>
+        <img src="path-to-intro-image.jpg" alt="Intro Image">
+      </div>
+
+    <div class="section">
+    <h2>2. Introduction</h2>
+    <p>A brief description of the problem being dealt with, which includes - 
+        the motivation behind the problem, background on the existing 
+        approaches being used in this field of research, and some applications of this 
+        project.</p>
+    <img src="path-to-intro-image.jpg" alt="Intro Image">
+  </div>
+
+  <div class="section">
+    <h2>3. Approaches</h2>
+    <p>A description of the different approaches proposed...</p>
+    <img src="path-to-approaches-image.jpg" alt="Approaches Image">
+  </div>
+
+  <div class="section">
+    <h2>4. Implementation</h2>
+    <p>A description of the dataset used in the project, 
+        the algorithms, along with any tuning parameters used in this project.</p>
+    <img src="path-to-approaches-image.jpg" alt="Approaches Image">
+  </div>
+
+  <div class="section">
+    <h2>5. Results and Conclusion</h2>
+    <p>A description of the different approaches proposed...</p>
+    <img src="path-to-approaches-image.jpg" alt="Approaches Image">
+  </div>
+
+  <div class="section">
+    <h2>6. Reference</h2>
+    <p>A brief description of the problem being dealt with, which includes - 
+        the motivation behind the problem, background on the existing 
+        approaches being used in this field of research, and some applications of this 
+        project.</p>
+    <img src="path-to-intro-image.jpg" alt="Intro Image">
+  </div>
+
+
+</div>
+
+    <!-- Abstract -->
+    <h3 class="Abstract">Abstract</h3>
+    <p class="justified">
+        The Unmanned Aerial Vehicles (UAVs) are rapidly emerging with their applications ranging from surveillance to disaster response. 
+        One such area is real-time traffic monitoring where UAVs with their vision based 
+        methods can play a significant role in streamlining traffic flow, mitigating 
+        congestion and quick emergency response in accidents
+        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0926580516300887"> 
+        (Liang Wang, Fangliang Chen, Huiming Yin, December 2016)</a> However, such an 
+        implementation is accompanied by challenges related to accuracy and computational 
+        overload. Therefore, a comprehensive comparison of available methodologies in 
+        computer vision is essential to determine the most effective approach for traffic 
+        management tasks.
+    </p>
+    <br><br>
+
+    <!-- Introduction -->
+    <h3 class ="Introduction">Introduction</h3>
+    <p class="justified">Classical computer vision methods, which leverage inherent 
+        image attributes such as texture, color, and shape, have been the mainstay for years. 
+        Vehicles, with their distinct symmetrical shapes and unique colors, are 
+        particularly amenable to these techniques. There are several traditional 
+        computer vision methods that are being used in vehicle detection. 
+        Researchers have used methods such as template matching and Haar cascade, 
+        HOG based features, SIFT, ORB with classifiers like KNN, SVM to do 
+        vehicle detection. While template matching provides good results, 
+        Haar cascade is a better approach as it detects the objects by 
+        detecting features. HOG and Haar cascades give competitive results. 
+        Detected objects can be tracked with methods like Lucas-Kanade 
+        optical flow, Kalman filter based SORT, mean-shift tracking. 
+        These methods are mostly based on prediction of the next 
+        probable position based on tracking features. On the other 
+        hand, in deep learning based methods like RCNN, fast RCNN, 
+        which is a two-stage method and one staged method like YOLO.
+        This research conducts a comparative analysis of traditional 
+        computer vision 
+        <p class="justified">Both techniques exhibit limitations and 
+            advantages 
+            associated with hardware and software. While classical computer vision
+             methods struggle with occlusion and lighting problems, they serve well in terms of computation power. Machine learning based methods give robust solutions and are not affected by the surrounding environment. But they are highly dataset dependent and need a lot of computational capability to train huge models. The foundation of the proposed research lies in evaluating the above two models, via both qualitative and quantitative analysis, to perform real-time vehicle detection and tracking.
+            and deep learning based vehicle detection and tracking algorithms using UAV for real-time traffic monitoring application. In conventional computer vision methods, the Haar cascade method is used with the Kannade Lucas optical flow tracker. This technique is compared with deep learning-based methods YoloV7 with DeepSORT to detect and track vehicles. A qualitative and quantitative analysis is performed in simulation and then tested on an in-house built UAV. The goal is to support informed decision making in perception and planning, ultimately enhancing safety in the industry. By evaluating these methods on a UAV platform, the research provides valuable insights for industry stakeholders to choose the most suitable approach for their specific requirements.
+        
+        Both techniques exhibit limitations and advantages associated with hardware and software. While classical computer vision methods struggle with occlusion and lighting problems, they serve well in terms of computation power. Machine learning based methods give robust solutions and are not affected by the surrounding environment. But they are highly dataset dependent and need a lot of computational capability to train huge models. The foundation of the proposed research lies in evaluating the above two models, via both qualitative and quantitative analysis, to perform real-time vehicle detection and tracking.</p>
+    <br><br>
+
+
+    <!-- Approaches -->
+    <h3 class ="Approaches">Approaches</h3>
+    <p class="justified">Classical computer vision methods, which leverage inherent image attributes such as texture, color, and shape, have been the mainstay for years. Vehicles, with their distinct symmetrical shapes and unique colors, are particularly amenable to these techniques. There are several traditional computer vision methods that are being used in vehicle detection. Researchers have used methods such as template matching and Haar cascade, HOG based features, SIFT, ORB with classifiers like KNN, SVM to do vehicle detection. While template matching provides good results, Haar cascade is a better approach as it detects the objects by detecting features. HOG and Haar cascades give competitive results. Detected objects can be tracked with methods like Lucas-Kanade optical flow, Kalman filter based SORT, mean-shift tracking. These methods are mostly based on prediction of the next probable position based on tracking features. On the other hand, in deep learning based methods like RCNN, fast RCNN, which is a two-stage method and one staged method like YOLO.</p>
+
+    <p class="justified">This research conducts a comparative analysis of traditional computer vision and deep learning based vehicle detection and tracking algorithms using UAV for real-time traffic monitoring application. In conventional computer vision methods, the Haar cascade method is used with the Kannade Lucas optical flow tracker. This technique is compared with deep learning-based methods YoloV7 with DeepSORT to detect and track vehicles. A qualitative and quantitative analysis is performed in simulation and then tested on an in-house built UAV. The goal is to support informed decision making in perception and planning, ultimately enhancing safety in the industry. By evaluating these methods on a UAV platform, the research provides valuable insights for industry stakeholders to choose the most suitable approach for their specific requirements.</p>
+
+    <p class="justified">Both techniques exhibit limitations and advantages associated with hardware and software. While classical computer vision methods struggle with occlusion and lighting problems, they serve well in terms of computation power. Machine learning based methods give robust solutions and are not affected by the surrounding environment. But they are highly dataset dependent and need a lot of computational capability to train huge models. The foundation of the proposed research lies in evaluating the above two models, via both qualitative and quantitative analysis, to perform real-time vehicle detection and tracking.</p>
+    <br><br>
+
+
+        <!-- Implementation -->
+        <h3 class ="Implementation">Implementation</h3>
+        <p class="justified">Classical computer vision methods, which leverage inherent image attributes such as texture, color, and shape, have been the mainstay for years. Vehicles, with their distinct symmetrical shapes and unique colors, are particularly amenable to these techniques. There are several traditional computer vision methods that are being used in vehicle detection. Researchers have used methods such as template matching and Haar cascade, HOG based features, SIFT, ORB with classifiers like KNN, SVM to do vehicle detection. While template matching provides good results, Haar cascade is a better approach as it detects the objects by detecting features. HOG and Haar cascades give competitive results. Detected objects can be tracked with methods like Lucas-Kanade optical flow, Kalman filter based SORT, mean-shift tracking. These methods are mostly based on prediction of the next probable position based on tracking features. On the other hand, in deep learning based methods like RCNN, fast RCNN, which is a two-stage method and one staged method like YOLO.</p>
+    
+        <p class="justified">This research conducts a comparative analysis of traditional computer vision and deep learning based vehicle detection and tracking algorithms using UAV for real-time traffic monitoring application. In conventional computer vision methods, the Haar cascade method is used with the Kannade Lucas optical flow tracker. This technique is compared with deep learning-based methods YoloV7 with DeepSORT to detect and track vehicles. A qualitative and quantitative analysis is performed in simulation and then tested on an in-house built UAV. The goal is to support informed decision making in perception and planning, ultimately enhancing safety in the industry. By evaluating these methods on a UAV platform, the research provides valuable insights for industry stakeholders to choose the most suitable approach for their specific requirements.</p>
+    
+        <p class="justified">Both techniques exhibit limitations and advantages associated with hardware and software. While classical computer vision methods struggle with occlusion and lighting problems, they serve well in terms of computation power. Machine learning based methods give robust solutions and are not affected by the surrounding environment. But they are highly dataset dependent and need a lot of computational capability to train huge models. The foundation of the proposed research lies in evaluating the above two models, via both qualitative and quantitative analysis, to perform real-time vehicle detection and tracking.</p>
+        <br><br>
+
+
+            <!-- Results -->
+    <h3 class ="Results">Results and Conclusion</h3>
+    <p class="justified">Classical computer vision methods, which leverage inherent image attributes such as texture, color, and shape, have been the mainstay for years. Vehicles, with their distinct symmetrical shapes and unique colors, are particularly amenable to these techniques. There are several traditional computer vision methods that are being used in vehicle detection. Researchers have used methods such as template matching and Haar cascade, HOG based features, SIFT, ORB with classifiers like KNN, SVM to do vehicle detection. While template matching provides good results, Haar cascade is a better approach as it detects the objects by detecting features. HOG and Haar cascades give competitive results. Detected objects can be tracked with methods like Lucas-Kanade optical flow, Kalman filter based SORT, mean-shift tracking. These methods are mostly based on prediction of the next probable position based on tracking features. On the other hand, in deep learning based methods like RCNN, fast RCNN, which is a two-stage method and one staged method like YOLO.</p>
+
+    <p class="justified">This research conducts a comparative analysis of traditional computer vision and deep learning based vehicle detection and tracking algorithms using UAV for real-time traffic monitoring application. In conventional computer vision methods, the Haar cascade method is used with the Kannade Lucas optical flow tracker. This technique is compared with deep learning-based methods YoloV7 with DeepSORT to detect and track vehicles. A qualitative and quantitative analysis is performed in simulation and then tested on an in-house built UAV. The goal is to support informed decision making in perception and planning, ultimately enhancing safety in the industry. By evaluating these methods on a UAV platform, the research provides valuable insights for industry stakeholders to choose the most suitable approach for their specific requirements.</p>
+
+    <p class="justified">Both techniques exhibit limitations and advantages associated with hardware and software. While classical computer vision methods struggle with occlusion and lighting problems, they serve well in terms of computation power. Machine learning based methods give robust solutions and are not affected by the surrounding environment. But they are highly dataset dependent and need a lot of computational capability to train huge models. The foundation of the proposed research lies in evaluating the above two models, via both qualitative and quantitative analysis, to perform real-time vehicle detection and tracking.</p>
+    <br><br>
+
+<div class="footer">
+  <p>© Diksha Aggarwal and Surafel Anshebo</p>
+</div>
+
+</body>
+</html>
