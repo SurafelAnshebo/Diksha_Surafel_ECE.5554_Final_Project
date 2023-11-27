@@ -240,13 +240,11 @@ https://www.hindawi.com/journals/cin/2023/7974201/fig1/ )" class="centered-image
 <h4 class="justified"> Data Association:</h4> <p class="justified"> In each new frame, Deep SORT performs a data association step. It compares the new detections (from YOLO) with existing trackers. This comparison is based on both the appearance features and the predicted motion of the objects. The Kalman filter is used for predicting the motion.</p>
 <h4 class="justified">Matching:</h4> <p class="justified"> Deep SORT matches the new detections with existing trackers. If a detection matches an existing tracker, it updates the tracker's state (like its new position and appearance). If there are detections that don't match any existing tracker, it creates new trackers for them.</p>
 <h4 class="justified"> Handling Lost Tracks:</h4> <p class="justified"> Sometimes, an object might be occluded or move out of the frame. Deep SORT handles this by allowing trackers to exist for a short time without new matching detections, giving the object a chance to reappear. If a tracker doesn't get a matching detection for too long, it is removed.</p>
-    <img src="sample_input.png" alt="Block Diagram of Deep SORT (Reference of paper 
-    https://www.hindawi.com/journals/cin/2023/7974201/fig1/ )" class="centered-image" style="width: 50%; height: auto;">
+    <img src="sample_input.png" alt="Sample Input" class="centered-image" style="width: 50%; height: auto;">
 
-    <p class="justified">
-  <img src="sample_output.png" alt="Block Diagram of Deep SORT (Reference of paper 
-  https://www.hindawi.com/journals/cin/2023/7974201/fig1/ )" class="centered-image" style="width: 50%; height: auto;">
-    </p>
+    
+  <img src="sample_output.png" alt="Sample Output" class="centered-image" style="width: 50%; height: auto;">
+    
       <p class="justified">
 A github repository: https://github.com/John1liu/YOLOV5-DeepSORT-Vehicle-Tracking-Master.git is used to perform the integration of DeepSORT with YoloV5. 
   The author of this repository has trained the YoloV5 and generated weights to perform detection and tracking. 
