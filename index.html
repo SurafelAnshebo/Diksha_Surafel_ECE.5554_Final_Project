@@ -284,8 +284,9 @@ A github repository: https://github.com/John1liu/YOLOV5-DeepSORT-Vehicle-Trackin
       </p>
 
 <h4 class="justified"> Training of YoloV5: </h4>
-
-<h4 class="justified">Format of Yolo Dataset:</h4>
+<p class="justified"> YoloV5 is not trained on vehicle dataset, thus the weights found on the official website of YoloV5 repository could not be used for detecting the vehicles. It provides a tutorial on Colab about training. Transfer learning approach has been utilized in this work. A pre-trained YoloV5 model is trained on new dataset on vehicle. The vehicle dataset is taken from a github repository: https://github.com/MaryamBoneh/Vehicle-Detection.git. The format of the dataset is as follow:
+</p>
+<h5 class="justified">Format of Yolo Dataset:</h5>
 
 <ul class="justified">
     <li><strong>Images folder:</strong>
@@ -333,9 +334,7 @@ A github repository: https://github.com/John1liu/YOLOV5-DeepSORT-Vehicle-Trackin
 
     </div>
 
-  <p class="justified"> Since YoloV5 is not trained on vehicle dataset, training is performed in Colab. YoloV5 is trained with the vehicle dataset from a github repository:
-  https://github.com/MaryamBoneh/Vehicle-Detection.git. YoloV5 provides a tutorial on google colab. This colab file is used to train the images. 
-  <ul class="justified">
+   <ul class="justified">
     <li>Data:</li>
     <ul>
       The vehicle dataset consists of labeled images.
