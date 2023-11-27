@@ -284,7 +284,7 @@ A github repository: https://github.com/John1liu/YOLOV5-DeepSORT-Vehicle-Trackin
       </p>
 
 <h4 class="justified"> Training of YoloV5: </h4>
-<p class="justified"> YoloV5 is not trained on vehicle dataset, thus the weights found on the official website of YoloV5 repository could not be used for detecting the vehicles. It provides a tutorial on Colab about training. Transfer learning approach has been utilized in this work. A pre-trained YoloV5 model is trained on new dataset on vehicle. The vehicle dataset is taken from a github repository: https://github.com/MaryamBoneh/Vehicle-Detection.git. The format of the dataset is as follow:
+<p class="justified"> YoloV5 is not trained on vehicle dataset, thus the weights found on the official website of YoloV5 repository could not be used for detecting the vehicles. It provides a tutorial on Colab about training. Transfer learning approach has been utilized in this work. A pre-trained YoloV5 model is trained on new dataset of vehicle. The vehicle dataset is taken from a github repository: https://github.com/MaryamBoneh/Vehicle-Detection.git. The dataset consists of a series of images containing around 1300 images of vehicles. The dataset is divided into 70% training images, 20% validation images and 10% testing images. The format of the dataset is as follow:
 </p>
 <h5 class="justified">Format of Yolo Dataset:</h5>
 
@@ -333,31 +333,30 @@ A github repository: https://github.com/John1liu/YOLOV5-DeepSORT-Vehicle-Trackin
     </figure>
 
     </div>
-
-   <ul class="justified">
-    <li>Data:</li>
-    <ul>
-      The vehicle dataset consists of labeled images.
-    </ul>
-    <li> Data Augmentation: </li>
-    <ul>
-      The model is trained on the custom dataset. The pre-trained weights are fine tuned using this dataset. 
-      The dataset contains around 1300 images. The dataset is augmented in Roboflow with rotation, brightness etc. 
-      The dataset is divided into 70% training images, 20% validation images and 10% testing images. 
-      The training was done for 50 epochs in the batch of 16 and it took 1.25 hours to train the model. 
+  <h5 class="justified"> YoloV5 training accuracy: </h5>
+  <p class="justified"> The training was done for 50 epochs in the batch of 16 and it took 1.25 hours to train the model. 
       https://colab.research.google.com/drive/1mOU64O4PNLYIvsotNcXOS6FVumm8eLV0?usp=sharing
       https://colab.research.google.com/drive/1kZnDnera2oelmQyJsM13xPc5ABvXyRdg?usp=sharing
+  </p>
+   <ul class="justified">
+    <li>F1 Score:</li>
+    <ul>
+      The F1 score is a harmonic mean of precision and recall. A higher F1 score indicates a better balance between precision and recall. It         is especially useful when the class distribution is imbalanced.
     </ul>
-  
+    <li> Precision: </li>
+    <ul>
+      This measures how accurate the predictions are, i.e., the percentage of the model's positive identifications that were actually correct.
+    </ul>
+     <li> Recall: </li>
+    <ul>
+      This measures how good the model is at detecting the positive cases. For tracking, pretrained weights of the Deep-SORT model are used.
+    </ul>
   </ul>
   
-  YoloV5 training accuracy:
   
-  F1 Score: The F1 score is a harmonic mean of precision and recall. A higher F1 score indicates a better balance between precision and recall. It is especially useful when the class distribution is imbalanced.
-  Precision: This measures how accurate the predictions are, i.e., the percentage of the model's positive identifications that were actually correct.
+  
 
-  Recall: This measures how good the model is at detecting the positive cases.
-  For tracking, pretrained weights of the Deep-SORT model are used. 
+  Recall:  
   https://github.com/nwojke/deep_sort
 
   </p>
