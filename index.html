@@ -275,26 +275,6 @@ https://www.hindawi.com/journals/cin/2023/7974201/fig1/ )" class="centered-image
   <figcaption style="text-align: center;">Common Caption: Overview of Dataset</figcaption>
   </div>
 
-    <div class="justified">
-    <p>Your text content goes here. This text will be justified as per the CSS rules you have defined.</p>
-    
-    <!-- Inserting images within the justified text region -->
-    <img src="img15.jpg" alt="Description of Image 1" style="width: 30%; height: auto; display: block; margin: 0 auto;">
-    <img src="img671.jpg" alt="Description of Image 2" style="width: 30%; height: auto; display: block; margin: 0 auto;">
-    <div style="display: flex; justify-content: space-around; align-items: center;">
-    <figure id="fig1">
-        <img src="sample_input.png" alt="Sample Input" style="width: 30%; height: auto; margin-right: 10px;">
-        <figcaption>Figure 1: Sample Input</figcaption>
-    </figure>
-
-    <figure id="fig2">
-        <img src="sample_output.png" alt="Sample Output" style="width: 30%; height: auto;">
-        <figcaption>Figure 2: Sample Output</figcaption>
-    </figure>
-      <\div>
-      
-    <p>More text content can follow the images, and it will also be justified.</p>
-  </div>
   
       <p class="justified">
 A github repository: https://github.com/John1liu/YOLOV5-DeepSORT-Vehicle-Tracking-Master.git is used to perform the integration of DeepSORT with YoloV5. 
@@ -304,11 +284,26 @@ A github repository: https://github.com/John1liu/YOLOV5-DeepSORT-Vehicle-Trackin
       </p>
 
 <h4 class="justified"> Training of YoloV5: </h4>
-<p class="justified"> Since YoloV5 is not trained on vehicle dataset, training is performed in Colab. YoloV5 is trained with the vehicle dataset from a github repository:
+<div class="justified">
+<p> Since YoloV5 is not trained on vehicle dataset, training is performed in Colab. YoloV5 is trained with the vehicle dataset from a github repository:
 https://github.com/MaryamBoneh/Vehicle-Detection.git. YoloV5 provides a tutorial on google colab. This colab file is used to train the images. 
 
 Data: The vehicle dataset consists of labeled images. 
+Data Augmentation:
+
+The model is trained on the custom dataset. The pre-trained weights are fine tuned using this dataset. 
+
+The dataset contains around 1300 images. The dataset is augmented in Roboflow with rotation, brightness etc. The dataset is divided into 70% training images, 20% validation images and 10% testing images. The training was done for 50 epochs in the batch of 16 and it took 1.25 hours to train the model. 
+https://colab.research.google.com/drive/1mOU64O4PNLYIvsotNcXOS6FVumm8eLV0?usp=sharing
+https://colab.research.google.com/drive/1kZnDnera2oelmQyJsM13xPc5ABvXyRdg?usp=sharing
+
+
+YoloV5 training accuracy:
+
+F1 Score: The F1 score is a harmonic mean of precision and recall. A higher F1 score indicates a better balance between precision and recall. It is especially useful when the class distribution is imbalanced.
+
 </p>
+  <\div>
 
 <h2 class="justified">Computer Vision Approach</h2>
 
