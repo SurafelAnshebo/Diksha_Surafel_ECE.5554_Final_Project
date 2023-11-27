@@ -285,25 +285,25 @@ A github repository: https://github.com/John1liu/YOLOV5-DeepSORT-Vehicle-Trackin
 
 <h4 class="justified"> Training of YoloV5: </h4>
 <div class="justified">
-<p> Since YoloV5 is not trained on vehicle dataset, training is performed in Colab. YoloV5 is trained with the vehicle dataset from a github repository:
-https://github.com/MaryamBoneh/Vehicle-Detection.git. YoloV5 provides a tutorial on google colab. This colab file is used to train the images. 
-</p>
-Data: The vehicle dataset consists of labeled images. 
-Data Augmentation:
+  <p> Since YoloV5 is not trained on vehicle dataset, training is performed in Colab. YoloV5 is trained with the vehicle dataset from a github repository:
+  https://github.com/MaryamBoneh/Vehicle-Detection.git. YoloV5 provides a tutorial on google colab. This colab file is used to train the images. 
+  </p>
+  Data: The vehicle dataset consists of labeled images. 
+  Data Augmentation:
+  
+  The model is trained on the custom dataset. The pre-trained weights are fine tuned using this dataset. 
+  
+  The dataset contains around 1300 images. The dataset is augmented in Roboflow with rotation, brightness etc. The dataset is divided into 70% training images, 20% validation images and 10% testing images. The training was done for 50 epochs in the batch of 16 and it took 1.25 hours to train the model. 
+  https://colab.research.google.com/drive/1mOU64O4PNLYIvsotNcXOS6FVumm8eLV0?usp=sharing
+  https://colab.research.google.com/drive/1kZnDnera2oelmQyJsM13xPc5ABvXyRdg?usp=sharing
+  
+  
+  YoloV5 training accuracy:
+  
+  F1 Score: The F1 score is a harmonic mean of precision and recall. A higher F1 score indicates a better balance between precision and recall. It is especially useful when the class distribution is imbalanced.
 
-The model is trained on the custom dataset. The pre-trained weights are fine tuned using this dataset. 
 
-The dataset contains around 1300 images. The dataset is augmented in Roboflow with rotation, brightness etc. The dataset is divided into 70% training images, 20% validation images and 10% testing images. The training was done for 50 epochs in the batch of 16 and it took 1.25 hours to train the model. 
-https://colab.research.google.com/drive/1mOU64O4PNLYIvsotNcXOS6FVumm8eLV0?usp=sharing
-https://colab.research.google.com/drive/1kZnDnera2oelmQyJsM13xPc5ABvXyRdg?usp=sharing
-
-
-YoloV5 training accuracy:
-
-F1 Score: The F1 score is a harmonic mean of precision and recall. A higher F1 score indicates a better balance between precision and recall. It is especially useful when the class distribution is imbalanced.
-
-
-  <\div>
+<\div>
 
 <h2 class="justified">Computer Vision Approach</h2>
 
