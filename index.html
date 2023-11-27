@@ -327,7 +327,7 @@ A github repository: https://github.com/John1liu/YOLOV5-DeepSORT-Vehicle-Trackin
 
     <div style="display: flex; justify-content: space-around; align-items: center;">
     <figure id="fig1">
-        <img src="structure.png" alt="Sample Input" style="width: 30%; height: auto;">
+        <img src="structure.png" alt="Sample Input" height: auto;">
         <figcaption>Figure 1: Directory Structure for YoloV5 Dataset</figcaption>
     </figure>
 
@@ -335,16 +335,22 @@ A github repository: https://github.com/John1liu/YOLOV5-DeepSORT-Vehicle-Trackin
 
   <p class="justified"> Since YoloV5 is not trained on vehicle dataset, training is performed in Colab. YoloV5 is trained with the vehicle dataset from a github repository:
   https://github.com/MaryamBoneh/Vehicle-Detection.git. YoloV5 provides a tutorial on google colab. This colab file is used to train the images. 
+  <ul class="justified">
+    <li>Data:</li>
+    <ul>
+      The vehicle dataset consists of labeled images.
+    </ul>
+    <li> Data Augmentation: </li>
+    <ul>
+      The model is trained on the custom dataset. The pre-trained weights are fine tuned using this dataset. 
+      The dataset contains around 1300 images. The dataset is augmented in Roboflow with rotation, brightness etc. 
+      The dataset is divided into 70% training images, 20% validation images and 10% testing images. 
+      The training was done for 50 epochs in the batch of 16 and it took 1.25 hours to train the model. 
+      https://colab.research.google.com/drive/1mOU64O4PNLYIvsotNcXOS6FVumm8eLV0?usp=sharing
+      https://colab.research.google.com/drive/1kZnDnera2oelmQyJsM13xPc5ABvXyRdg?usp=sharing
+    </ul>
   
-  Data: The vehicle dataset consists of labeled images. 
-  Data Augmentation:
-  
-  The model is trained on the custom dataset. The pre-trained weights are fine tuned using this dataset. 
-  
-  The dataset contains around 1300 images. The dataset is augmented in Roboflow with rotation, brightness etc. The dataset is divided into 70% training images, 20% validation images and 10% testing images. The training was done for 50 epochs in the batch of 16 and it took 1.25 hours to train the model. 
-  https://colab.research.google.com/drive/1mOU64O4PNLYIvsotNcXOS6FVumm8eLV0?usp=sharing
-  https://colab.research.google.com/drive/1kZnDnera2oelmQyJsM13xPc5ABvXyRdg?usp=sharing
-  
+  </ul>
   
   YoloV5 training accuracy:
   
@@ -360,17 +366,17 @@ A github repository: https://github.com/John1liu/YOLOV5-DeepSORT-Vehicle-Trackin
   <div style="display: flex; justify-content: space-around; align-items: center;">
     <figure id="fig1">
         <img src="P_curve.png" alt="Sample Input" style="width: 30%; height: auto; margin-right: 10px;">
-        <figcaption>Figure 1: Sample Input</figcaption>
+        <figcaption>Figure 1: P_curve</figcaption>
     </figure>
 
     <figure id="fig2">
         <img src="R_curve.png" alt="Sample Output" style="width: 30%; height: auto;">
-        <figcaption>Figure 2: Sample Output</figcaption>
+        <figcaption>Figure 2: R_curve</figcaption>
     </figure>
 
     <figure id="fig2">
         <img src="PR_curve.png" alt="Sample Output" style="width: 30%; height: auto;">
-        <figcaption>Figure 2: Sample Output</figcaption>
+        <figcaption>Figure 2: PR_curve</figcaption>
     </figure>
   </div>
 
