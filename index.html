@@ -285,6 +285,42 @@ A github repository: https://github.com/John1liu/YOLOV5-DeepSORT-Vehicle-Trackin
 
 <h4 class="justified"> Training of YoloV5: </h4>
 
+<h4 class="justified">Format of Yolo Dataset:</h4>
+
+<ul class="justified">
+    <li><strong>Images folder:</strong>
+        <ul>
+            <li>The dataset consists of a series of images containing the images of vehicles (Car, Motorcycle, Truck, Bus, Bicycle in our case).</li>
+        </ul>
+    </li>
+    <li><strong>Labels folder:</strong>
+        <ul>
+            <li>For each image, there is a corresponding label file.</li>
+            <li>These label files are in plain text format.</li>
+            <li>The name of the label file matches the name of the image file.</li>
+        </ul>
+    </li>
+    <li><strong>Label file format:</strong>
+        <ul>
+            <li>Each line in a label file corresponds to a different object in the image.</li>
+            <li>The format for each line is typically: <code>&lt;class&gt; &lt;x_center&gt; &lt;y_center&gt; &lt;width&gt; &lt;height&gt;</code>.</li>
+            <li><code>&lt;class&gt;</code> is an integer representing the class of the object (e.g., 0 for cars, 1 for Motorcycle, etc.).</li>
+            <li><code>&lt;x_center&gt;</code>, <code>&lt;y_center&gt;</code>, <code>&lt;width&gt;</code>, and <code>&lt;height&gt;</code> are float values relative to the width and height of the image and should be normalized between 0 and 1. These represent the bounding box of the object.
+                <ul>
+                    <li><code>&lt;x_center&gt;</code> and <code>&lt;y_center&gt;</code> are the center coordinates of the bounding box.</li>
+                    <li><code>&lt;width&gt;</code> and <code>&lt;height&gt;</code> are the width and height of the bounding box.</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><strong>Directory Structure:</strong>
+        <ul>
+            <li>The dataset is organized into directories, one for images and one for labels.</li>
+        </ul>
+    </li>
+</ul>
+
+
   <p class="justified"> Since YoloV5 is not trained on vehicle dataset, training is performed in Colab. YoloV5 is trained with the vehicle dataset from a github repository:
   https://github.com/MaryamBoneh/Vehicle-Detection.git. YoloV5 provides a tutorial on google colab. This colab file is used to train the images. 
   
