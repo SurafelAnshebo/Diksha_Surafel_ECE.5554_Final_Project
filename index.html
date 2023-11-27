@@ -217,7 +217,7 @@
 
     <!-- Approaches -->
     <h3 id="Approaches" class ="Approaches">Approaches</h3>
-    <p class="justified"><h4>Deep learning approach</h4>
+    <p class="justified"><h3>Deep learning approach</h3>
 
     <h3>Overview of YOLOv7:</h3>
 YOLOv7 is an advanced version of the YOLO architecture. Unlike traditional two-stage detectors like R-CNN, which first select region proposals and then classify them, YOLOv7 is a single-stage detector that predicts both bounding boxes and class probabilities directly from the image in one evaluation. This makes it exceptionally fast and suitable for real-time applications.
@@ -228,10 +228,10 @@ DeepSort is an extension of the SORT (Simple Online and Realtime Tracking) algor
 
      <h3> Tracking with Deep SORT:</h3>
 
-Initializing Trackers: When an object is detected for the first time, Deep SORT initializes a new tracker for it. This tracker uses the extracted features to keep track of the object.
-Data Association: In each new frame, Deep SORT performs a data association step. It compares the new detections (from YOLO) with existing trackers. This comparison is based on both the appearance features and the predicted motion of the objects. The Kalman filter is used for predicting the motion.
-Matching: Deep SORT matches the new detections with existing trackers. If a detection matches an existing tracker, it updates the tracker's state (like its new position and appearance). If there are detections that don't match any existing tracker, it creates new trackers for them.
-Handling Lost Tracks: Sometimes, an object might be occluded or move out of the frame. Deep SORT handles this by allowing trackers to exist for a short time without new matching detections, giving the object a chance to reappear. If a tracker doesn't get a matching detection for too long, it is removed.
+<h4> Initializing Trackers: </h4> When an object is detected for the first time, Deep SORT initializes a new tracker for it. This tracker uses the extracted features to keep track of the object.
+<h4> Data Association:</h4> In each new frame, Deep SORT performs a data association step. It compares the new detections (from YOLO) with existing trackers. This comparison is based on both the appearance features and the predicted motion of the objects. The Kalman filter is used for predicting the motion.
+<h4>Matching:</h4> Deep SORT matches the new detections with existing trackers. If a detection matches an existing tracker, it updates the tracker's state (like its new position and appearance). If there are detections that don't match any existing tracker, it creates new trackers for them.
+<h4> Handling Lost Tracks:</h4> Sometimes, an object might be occluded or move out of the frame. Deep SORT handles this by allowing trackers to exist for a short time without new matching detections, giving the object a chance to reappear. If a tracker doesn't get a matching detection for too long, it is removed.
     
     
     </p>
