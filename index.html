@@ -226,18 +226,19 @@
     <h3 class="justified">Deep learning approach</h3>
 
     <h3 class="justified">Overview of YOLOv7:</h3>
-<p class="justified">YOLOv7 is an advanced version of the YOLO architecture. Unlike traditional two-stage detectors like R-CNN, which first select region proposals and then classify them, YOLOv7 is a single-stage detector that predicts both bounding boxes and class probabilities directly from the image in one evaluation. This makes it exceptionally fast and suitable for real-time applications.
+<p class="justified">YOLOv5 is an advanced version of the YOLO architecture. Unlike traditional two-stage detectors like R-CNN, which first select region proposals and then classify them, YOLOv5 is a single-stage detector that predicts both bounding boxes and class probabilities directly from the image in one evaluation. This makes it exceptionally fast and suitable for real-time applications.
 </p>
-
+  <div class="justified">
   <h3 class="justified">Model Description:</h3>
   <div style="display: flex; justify-content: space-around; align-items: center;">
     <figure id="fig1">
-        <img src="yolo_str.png" alt="Sample Input" style="width: 30%; height: auto;">
+        <img src="yolo_str.png" alt="Sample Input" style="width: 50%; height: auto;">
         <figcaption>Figure 1: YoloV5 Model Description</figcaption>
     </figure>
   </div>
+  <\div>
 <p class="justified"> 
-  Here 'n' represents the number of times that layer is used, 'from' represents the layer from which the current layer is taking the inputs where '-1' represents the previous layer, "arguments" column specifies the parameters or settings passed to each layer or module in the network for example, models.common.Conv [3, 48, 6, 2, 2]: [Input Channels, Output Channels, Kernel Size, Stride, Padding].
+  Here 'n' represents the number of times that layer is used, 'from' represents the layer from which the current layer is taking the inputs where '-1' represents the previous layer, 'arguments' column specifies the parameters or settings passed to each layer or module in the network for example, models.common.Conv [3, 48, 6, 2, 2]: [Input Channels, Output Channels, Kernel Size, Stride, Padding].
 </p>
   
 
@@ -342,7 +343,7 @@ A github repository: https://github.com/John1liu/YOLOV5-DeepSORT-Vehicle-Trackin
 
     <div style="display: flex; justify-content: space-around; align-items: center;">
     <figure id="fig1">
-        <img src="structure.png" alt="Sample Input" height: auto;">
+        <img src="structure.png" alt="Sample Input" style="width: auto; height: 30%;">
         <figcaption>Figure 1: Directory Structure for YoloV5 Dataset</figcaption>
     </figure>
 
