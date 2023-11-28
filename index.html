@@ -626,6 +626,52 @@ A github repository: https://github.com/John1liu/YOLOV5-DeepSORT-Vehicle-Trackin
 </div>
 <figcaption style="text-align: center; margin-top: 10px;">Fig 11: Haar Cascade test output</figcaption>
 
+<br></br>
+
+
+
+
+
+
+
+
+
+
+<div style="display: flex; justify-content: center; align-items: center; flex-wrap: nowrap;">
+
+  <!-- Figure 1 -->
+  <figure id="fig1" style="text-align: center; margin: 10px; max-width: 30%; flex: 1;">
+      <img src="scaled1.gif" alt="Sample Input" style="width: 100%; height: auto;">
+  </figure>
+
+  <!-- Figure 2 -->
+  <figure id="fig2" style="text-align: center; margin: 10px; max-width: 50%; flex: 1;">
+      <img src="scaled2.gif" alt="Sample Output" style="width: 100%; height: auto;">
+  </figure>
+
+</div>
+<figcaption style="text-align: center; margin-top: 10px;">Caption: Overview of scaling issue</figcaption>
+
+
+    <p class="justified">
+      One of the issues with Haar Cascade is scaling which can be easily seen from the two gif images. 
+      In both gif's tracking is deployed using Lucas-Kanade method, the haar methods performs 
+      well on the images it is trained on and 
+      doesnt not work well on other videos that we tested. 
+    </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
 <p class="justified">  Quantitative Results: To quantitatively evaluate the performance of the algorithm, 
   Intersection over Union (IoU) metric has been used. IoU essentially works by taking 
   two inputs namely - ground truth bounding box and the prediction 
