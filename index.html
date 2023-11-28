@@ -497,12 +497,23 @@ A github repository: https://github.com/John1liu/YOLOV5-DeepSORT-Vehicle-Trackin
 
           <h4 class="justified">2. Tracking using Lucas-Kanade method: </h4>
 
+          <p>
+            The most general (and challenging) version of motion estimation is to compute an independent 
+            estimate of motion at each pixel, which is generally known as optical (or optic) flow. 
+            This generally involves minimizing the brightness or
+            color difference between corresponding pixels summed over the image.
+            The patch-based approach usually involves using a Taylor series expansion of the dis-
+            placed image function to obtain sub-pixel estimate. (Lucas and Kanade 1981) [6]
+          </p>
+
           <p class="justified">  
           This method tracks the movement of detected points (centers of cars) across frames. 
           It assumes the flow (motion) is consistent in a local neighborhood and uses a least squares 
           approach to estimate the motion.
             </p>      
           
+
+
             <p> 
               The first step involves detecting points of interest 
               in the video frame. These points are typically corners or highly textured
@@ -520,7 +531,7 @@ A github repository: https://github.com/John1liu/YOLOV5-DeepSORT-Vehicle-Trackin
           This technique tries to find the motion vector (direction and magnitude of movement) 
           for each point that best fits the actual movement observed across frames.
                 
-                </p>      
+                </p>     
 
                 <h5 class="justified">Steps used in this algorithm:</h5>
 
@@ -699,6 +710,7 @@ A github repository: https://github.com/John1liu/YOLOV5-DeepSORT-Vehicle-Trackin
     <style>
       a {
           text-decoration: none;
+          color: #333;
       }
   </style>
   
@@ -710,8 +722,15 @@ A github repository: https://github.com/John1liu/YOLOV5-DeepSORT-Vehicle-Trackin
     <a href="https://docs.opencv.org/4.x/dc/d88/tutorial_traincascade.html">3. OpenCV training a cascade classifier</a>
       <br>
       <a href="https://docs.opencv.org/3.4/db/d7f/tutorial_js_lucas_kanade.html">4. OpenCV optical flow</a>
+      <br>
+      <a href="https://towardsdatascience.com/viola-jones-algorithm-and-haar-cascade-classifier-ee3bfb19f7d8">
+        5. "Viola Jones 
+        Algorithm and Haar Cascade Classifier" article by Mrinal Tyagi</a>
+        <br>
 
-    </ul>
+        <a >6. Szeliski, Richard. Computer vision: algorithms and applications. </a>
+
+      </ul>
 
     <br><br>
             
