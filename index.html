@@ -61,10 +61,18 @@
   }
 
   .centered-image {
+    text-align: center; 
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
+
+figcaption {
+    text-align: center;
+    margin-top: 10px; /* Space above the caption */
+    margin-bottom: 20px; /* Space below the caption, adjust as needed */
+}
+
 
   .Abstract {
       font-size: 40px;
@@ -151,27 +159,10 @@
   </div>
 
   <div class="section">
-    <a href="#Implementation"> <h2>4. Implementation</h2></a>
-    <p>A description of the dataset used in the project, 
-        the algorithms, along with any tuning parameters used in this project.</p>
-    <img src="path-to-approaches-image.jpg" alt="Approaches Image">
-  </div>
-
-  <div class="section">
-    <a href="#Results"> <h2>5. Results and Conclusion</h2></a>
+    <a href="#Results"> <h2>4. Results and Conclusion</h2></a>
     <p>A description of the different approaches proposed...</p>
     <img src="path-to-approaches-image.jpg" alt="Approaches Image">
   </div>
-
-  <div class="section">
-    <a href="#Reference"><h2>6. Reference</h2></a>
-    <p>A brief description of the problem being dealt with, which includes - 
-        the motivation behind the problem, background on the existing 
-        approaches being used in this field of research, and some applications of this 
-        project.</p>
-    <img src="path-to-intro-image.jpg" alt="Intro Image">
-  </div>
-
 
 </div>
 
@@ -232,11 +223,11 @@
   <h3 class="justified">Model Description:</h3>
   <div style="display: flex; justify-content: space-around; align-items: center;">
     <figure id="fig1">
-        <img src="yolo_str.png" alt="Sample Input" style="width: 50%; height: auto;">
+        <img src="yolo_str.png" alt="Sample Input" style="width: 100%; height: auto;">
         <figcaption>Figure 1: YoloV5 Model Description</figcaption>
     </figure>
   </div>
-  <\div>
+  
 <p class="justified"> 
   Here 'n' represents the number of times that layer is used, 'from' represents the layer from which the current layer is taking the inputs where '-1' represents the previous layer, 'arguments' column specifies the parameters or settings passed to each layer or module in the network for example, models.common.Conv [3, 48, 6, 2, 2]: [Input Channels, Output Channels, Kernel Size, Stride, Padding].
 </p>
@@ -244,12 +235,15 @@
 
   
 <h3 class="justified">Overview of DeepSort:</h3>
-<p class="justified"> DeepSort is an extension of the SORT (Simple Online and Realtime Tracking) algorithm. While SORT uses Kalman filtering and Hungarian algorithm for tracking, DeepSort incorporates deep learning features to improve tracking performance, especially in cases of occlusions or interactions between objects.
+<p class="justified">DeepSort is an extension of the SORT (Simple Online and Realtime Tracking) algorithm. While SORT uses Kalman filtering and Hungarian algorithm for tracking, DeepSort incorporates deep learning features to improve tracking performance, especially in cases of occlusions or interactions between objects.
 </p>
-<img  src="deepsort_blockdiag.png" alt="Block Diagram of Deep SORT (Reference of paper 
-https://www.hindawi.com/journals/cin/2023/7974201/fig1/ )" class="centered-image" style="width: 50%; height: auto;">
-    
-     <h3 class="justified"> Tracking with Deep SORT:</h3>
+<figure class="centered-image">
+    <img src="deepsort_blockdiag.png" alt="Block Diagram of Deep SORT (Reference of paper https://www.hindawi.com/journals/cin/2023/7974201/fig1/ )" class="centered-image" style="width: 70%; height: auto;">
+    <figcaption>Figure 2: DeepSort Block Diagram</figcaption>
+</figure>
+
+
+<h3 class="justified"> Tracking with DeepSORT:</h3>
 
 <h4 class="justified"> Initializing Trackers: </h4> <p class="justified"> When an object is detected for the first time, Deep SORT initializes a new tracker for it. This tracker uses the extracted features to keep track of the object. </p>
 <h4 class="justified"> Data Association:</h4> <p class="justified"> In each new frame, Deep SORT performs a data association step. It compares the new detections (from YOLO) with existing trackers. This comparison is based on both the appearance features and the predicted motion of the objects. The Kalman filter is used for predicting the motion.</p>
@@ -260,7 +254,7 @@ https://www.hindawi.com/journals/cin/2023/7974201/fig1/ )" class="centered-image
   <div class="justified">
   <div style="display: flex; justify-content: space-around; align-items: center;">
     <figure id="fig1">
-        <img src="sample_input.png" alt="Sample Input" style="width: 30%; height: auto; margin-right: 10px;">
+        <img src="sample_input.png" alt="Sample Input" style="width: 30%; height: auto;">
         <figcaption>Figure 1: Sample Input</figcaption>
     </figure>
 
@@ -439,36 +433,54 @@ A github repository: https://github.com/John1liu/YOLOV5-DeepSORT-Vehicle-Trackin
             are passed to the final detection stage.
   
             </p>
-            <br><br>
+            <figure id="Haar_block_diagram_text" style="text-align: center; margin-left: auto; margin-right: auto; max-width: 100%;">
+              <img src="Haar_block_diagram.png" style="width: 70%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+              <figcaption style="text-align: center; margin-top: 10px; margin-bottom: 20px;">Fig 1: Block diagram of HAAR CASCADE Classifier</figcaption>
+          </figure>
+          <br><br>
+          
 
-        <!-- Implementation -->
-        <h3 id="Implementation" class ="Implementation">Implementation</h3>
-        <p class="justified">Classical computer vision methods, which leverage inherent image attributes such as texture, color, and shape, have been the mainstay for years. Vehicles, with their distinct symmetrical shapes and unique colors, are particularly amenable to these techniques. There are several traditional computer vision methods that are being used in vehicle detection. Researchers have used methods such as template matching and Haar cascade, HOG based features, SIFT, ORB with classifiers like KNN, SVM to do vehicle detection. While template matching provides good results, Haar cascade is a better approach as it detects the objects by detecting features. HOG and Haar cascades give competitive results. Detected objects can be tracked with methods like Lucas-Kanade optical flow, Kalman filter based SORT, mean-shift tracking. These methods are mostly based on prediction of the next probable position based on tracking features. On the other hand, in deep learning based methods like RCNN, fast RCNN, which is a two-stage method and one staged method like YOLO.</p>
+          <p>
+          The process involves two major steps, training and detection steps. 
+          For preparing the training data, the negative images (which include everything that we 
+          don't want to detect) are prepared manually, and the positive images are prepared using the 
+          function opencv_createsamples, which creates a positive sample from a collection of positive 
+          images. Then A built in Opencv_traincascade function is used for training a cascade classifier, 
+          which is a series of stages where each stage is a collection of weak classifiers. These 
+          classifiers are essentially simple decision trees which when combined form a strong classifier.            </p>
+
+
+
+          <h4 class="justified">2. Tracking using Lucas-Kanade method: </h4>
+
+          <p class="justified">  
+          This method tracks the movement of detected points (centers of cars) across frames. 
+          It assumes the flow (motion) is consistent in a local neighborhood and uses a least squares 
+          approach to estimate the motion.
+            </p>      
+          
+            <p> 
+              The first step involves detecting points of interest 
+              in the video frame. These points are typically corners or highly textured
+               areas that are easy to track.
+                </p>      
+             <p> 
+              The method assumes that the motion of these points is coherent within a small neighborhood. 
+              That is, points close to each other move in a similar way. This assumption is based on the 
+          real-world behavior of objects, where parts of an object (or closely situated objects) generally move in tandem.
+              </p>      
     
-        <br><br>
-
-
+          <p> 
+          Once points are detected, the method estimates their motion from one frame to the next. 
+          To do this, it employs 'least squares estimation'. 
+          This technique tries to find the motion vector (direction and magnitude of movement) 
+          for each point that best fits the actual movement observed across frames.
+                
+                </p>      
+  
             <!-- Results -->
     <h3 id="Results" class ="Results">Results and Conclusion</h3>
-    <p class="justified"> Qualitative Results: Based upon the data pre-processing techniques and the model architecture described above, the input images from the dataset were fed to this model and the output images with the predicted bounding boxes were analyzed to evaluate the model performance. Figures ___ show the bounding box predictions for a sample of test images. The bounding boxes are represented in green surrounding the detected vehicles
-
-    </p>
-      <div style="display: flex; justify-content: space-around; align-items: center;">
-    <figure id="fig1">
-        <img src="car_frame_54_yolo.jpg" alt="Sample Input" style="width: 30%; height: auto; margin-right: 10px;">
-        <figcaption>Figure 1: Output test Image 1</figcaption>
-    </figure>
-
-    <figure id="fig2">
-        <img src="car_frame_58_yolo.jpg" alt="Sample Output" style="width: 30%; height: auto;">
-        <figcaption>Figure 2: Output test Image 2</figcaption>
-    </figure>
-
-    <figure id="fig2">
-        <img src="car_frame_62_yolo.jpg" alt="Sample Output" style="width: 30%; height: auto;">
-        <figcaption>Figure 2: Output test Image 3</figcaption>
-    </figure>
-  </div>
+    <p class="justified">Classical computer vision methods, which leverage inherent image attributes such as texture, color, and shape, have been the mainstay for years. Vehicles, with their distinct symmetrical shapes and unique colors, are particularly amenable to these techniques. There are several traditional computer vision methods that are being used in vehicle detection. Researchers have used methods such as template matching and Haar cascade, HOG based features, SIFT, ORB with classifiers like KNN, SVM to do vehicle detection. While template matching provides good results, Haar cascade is a better approach as it detects the objects by detecting features. HOG and Haar cascades give competitive results. Detected objects can be tracked with methods like Lucas-Kanade optical flow, Kalman filter based SORT, mean-shift tracking. These methods are mostly based on prediction of the next probable position based on tracking features. On the other hand, in deep learning based methods like RCNN, fast RCNN, which is a two-stage method and one staged method like YOLO.</p>
 
     <br><br>
 
