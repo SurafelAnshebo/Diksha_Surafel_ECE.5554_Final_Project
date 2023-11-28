@@ -352,9 +352,19 @@ A github repository: https://github.com/John1liu/YOLOV5-DeepSORT-Vehicle-Trackin
     </div>
   <h5 class="justified"> YoloV5 training accuracy: </h5>
   <p class="justified"> The training is done for 50 epochs in the batch of 16 and it took 1.25 hours to train the model. 
-      https://colab.research.google.com/drive/1mOU64O4PNLYIvsotNcXOS6FVumm8eLV0?usp=sharing
-      https://colab.research.google.com/drive/1kZnDnera2oelmQyJsM13xPc5ABvXyRdg?usp=sharing
+
+    <a href="https://colab.research.google.com/drive/1mOU64O4PNLYIvsotNcXOS6FVumm8eLV0?usp=sharing" target="_blank">
+      Colab_1
+    </a> 
+      <!-- You can change this Colab_1 and Colab_2 to change the text it is already clickable -->
+    <a href="https://colab.research.google.com/drive/1kZnDnera2oelmQyJsM13xPc5ABvXyRdg?usp=sharing" 
+    target="_blank">
+    Colab_2
+    </a> 
+
   </p>
+
+
    <ul class="justified">
     <li>F1 Score:</li>
     <ul>
@@ -370,8 +380,13 @@ A github repository: https://github.com/John1liu/YOLOV5-DeepSORT-Vehicle-Trackin
     </ul>
   </ul>
   
-  Recall:  
-  https://github.com/nwojke/deep_sort
+
+  <p>
+    Recall: 
+    <a href="https://github.com/nwojke/deep_sort" target="_blank">
+      github
+    </a> 
+  </p>
 
   </p>
 <!-- Container for the first two figures -->
@@ -569,7 +584,6 @@ A github repository: https://github.com/John1liu/YOLOV5-DeepSORT-Vehicle-Trackin
 
     <br><br>
 
-
     <div style="display: flex; justify-content: center; align-items: center; flex-wrap: nowrap;">
 
       <!-- Figure 1 for yolo output -->
@@ -610,9 +624,36 @@ A github repository: https://github.com/John1liu/YOLOV5-DeepSORT-Vehicle-Trackin
     </figure>
 
 </div>
-<figcaption style="text-align: center; margin-top: 10px;">Fig 10: Haar Cascade test output</figcaption>
+<figcaption style="text-align: center; margin-top: 10px;">Fig 11: Haar Cascade test output</figcaption>
+
+<p class="justified">  Quantitative Results: To quantitatively evaluate the performance of the algorithm, 
+  Intersection over Union (IoU) metric has been used. IoU essentially works by taking 
+  two inputs namely - ground truth bounding box and the prediction 
+  bounding box and computing the intersection and the union of the two 
+  bounding boxes respectively.</p>
+
+<br><br>
 
 
+<div class="justified">
+  <div style="display: flex; justify-content: center; align-items: center; flex-wrap: nowrap;">
+
+    <!-- IOU formuala -->
+    <figure id="fig1" style="text-align: center; margin: 20px; max-width: 45%; flex: 1;">
+        <img src="IOU.png" alt="P curve" style="width: 100%; height: auto;">
+        <figcaption style="text-align: center; margin-top: 10px;"> Fig 12: Intersection Over Union(IOU) 
+          description</figcaption>
+
+    </figure>
+
+    <!-- IOU table -->
+    <figure id="fig2" style="text-align: center; margin: 20px; max-width: 45%; flex: 1;">
+        <img src="IOU_table.png" alt="R curve" style="width: 100%; height: auto;">
+        <figcaption style="text-align: center; margin-top: 10px;">Fig 13: Intersection Over Union Table</figcaption>
+    </figure>
+
+  </div>
+</div>
 
                 <!-- Reference -->
     <h3 id="Reference" class ="Reference">Reference</h3>
