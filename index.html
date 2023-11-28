@@ -458,9 +458,18 @@ A github repository: https://github.com/John1liu/YOLOV5-DeepSORT-Vehicle-Trackin
           function opencv_createsamples, which creates a positive sample from a collection of positive 
           images. Then A built in Opencv_traincascade function is used for training a cascade classifier, 
           which is a series of stages where each stage is a collection of weak classifiers. These 
-          classifiers are essentially simple decision trees which when combined form a strong classifier.            </p>
+          classifiers are essentially simple decision trees which when combined form a strong classifier. 
+            </p>
 
-
+            <p>
+              For this project, a pretrained xml file from 
+              <a href="https://github.com/AdityaPai2398/Vehicle-And-Pedestrian-
+              Detection-Using-Haar-Cascades" target="_blank">
+                github
+              </a> 
+              with 200 positive and 200 negative images with 24*24 width and height 
+              of sample images and 20 number of stages is used.
+            </p>
 
           <h4 class="justified">2. Tracking using Lucas-Kanade method: </h4>
 
@@ -488,7 +497,6 @@ A github repository: https://github.com/John1liu/YOLOV5-DeepSORT-Vehicle-Trackin
           for each point that best fits the actual movement observed across frames.
                 
                 </p>      
-
 
                 <h5 class="justified">Steps used in this algorithm:</h5>
 
@@ -603,35 +611,6 @@ A github repository: https://github.com/John1liu/YOLOV5-DeepSORT-Vehicle-Trackin
 
 </div>
 <figcaption style="text-align: center; margin-top: 10px;">Fig 10: Haar Cascade test output</figcaption>
-
-  <br><br>
-
-  Quantitative Results: To quantitatively evaluate the performance of the vehicle detection algorithm, Intersection over Union (IoU) metric has been used. IoU essentially works by taking two inputs namely - ground truth bounding box and the prediction bounding box and computing the intersection and the union of the two bounding boxes respectively. Figure ___ shows the illustration on how the IoU is computed.
-
-    <figure class="centered-image">
-    <img src="IOU.png" alt="https://pyimagesearch.com/2016/11/07/intersection-over-union-iou-for-object-detection/" class="centered-image" style="width: 50%; height: auto;">
-    <figcaption>Fig 11: Intersection over Union (IoU)</figcaption>
-</figure>
-    
-  <div style="display: flex; justify-content: center; align-items: center; flex-wrap: nowrap;">
-
-    <!-- Figure 1 for Haar output -->
-    <figure id="fig1" style="text-align: center; margin: 10px; max-width: 22%; flex: 1;">
-        <img src="car_frame_54_iou.jpg" alt="Sample Input" style="width: 100%; height: auto;">
-    </figure>
-
-    <!-- Figure 2 for Haar output-->
-    <figure id="fig2" style="text-align: center; margin: 10px; max-width: 22%; flex: 1;">
-        <img src="car_frame_58_iou.jpg" alt="Sample Output" style="width: 100%; height: auto;">
-    </figure>
-
-    <!-- Figure 3 for Haar output-->
-    <figure id="fig3" style="text-align: center; margin: 10px; max-width: 22%; flex: 1;">
-        <img src="car_frame_62_iou.jpg" alt="Sample Output" style="width: 100%; height: auto;">
-    </figure>
-
-</div>
-<figcaption style="text-align: center; margin-top: 10px;">Fig 12: IoU of Haar Cascade test output with ground truth bounding box (blue) and predicted bounding box (yellow) </figcaption>
 
 
 
