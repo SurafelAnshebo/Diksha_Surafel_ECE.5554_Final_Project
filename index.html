@@ -475,7 +475,78 @@ A github repository: https://github.com/John1liu/YOLOV5-DeepSORT-Vehicle-Trackin
           for each point that best fits the actual movement observed across frames.
                 
                 </p>      
-  
+
+
+                <h5 class="justified">Steps used in this algorithm:</h5>
+
+<ul class="justified">
+    <li><strong>Setup and initialization:</strong>
+        <ul>
+            <li>
+              Initialization: The script starts by loading a Haar Cascade classifier (car_classifier) 
+              specifically trained to detect cars. This classifier is built from a pre-trained XML 
+              file (haarcascade_car.xml), which contains the data required for detecting cars based on 
+              the Haar features.
+            </li>
+        </ul>
+    </li>
+    <li><strong>Lucas-Kanade Parameters:</strong>
+        <ul>
+            <li>Optical Flow Settings: Parameters for the Lucas-Kanade optical flow method are defined in lk_params. 
+              These include winSize (size of the window for each pyramid 
+              level which is 15*15), maxLevel (number of pyramid levels, which is 2), 
+              and criteria (specifies the termination criteria of the algorithm: 
+              either a certain number of iterations or a certain accuracy threshold, 
+              whichever is reached first).
+            </li>
+        </ul>
+    </li>
+    <li><strong>Processing loop:</strong>
+        <ul>
+            <li>Each frame is converted to a grayscale since the operations to follow 
+              (both Haar Cascade and Lucas Kanade optical flow) are performed on gray scale for 
+              efficiency.</li>
+            </li>
+          </ul>
+    <li><strong>Detecting and initializing points:</strong>
+        <ul>
+            <li>When the script detects that there are no initialized points for tracking (p0.size == 0), 
+              it performs car detection on the current frame. The detectMultiScale function of the 
+              classifier identifies cars in the frame and returns a list of rectangles (cars), where 
+              each rectangle corresponds to a detected car. For each detected car, the script 
+              calculates the center of its bounding box. 
+              These center points are stored in p0 and are used as the initial points for 
+              tracking the cars. </li>
+        </ul>
+    </li>
+  <li><strong>Optical Flow:</strong>
+        <ul>
+            <li>If there are already points initialized for tracking, the script calculates 
+              the optical flow for these points from the previous frame to the current 
+              frame using cv2.calcOpticalFlowPyrLK. This function estimates 
+              the new positions (p1) of the points.</li>
+        </ul>
+    </li>
+
+<li><strong>Drawing and updating:</strong>
+  <ul>
+      <li>Visualizing Tracking: The script then iterates through the good tracking points and 
+        draws rectangles around their new positions. This provides 
+        a visual indication of how each detected car has moved from the previous 
+        frame to the current frame.</li>
+        <li> Updating points and frame: The tracked points (p0) are updated 
+          with the new positions (good_new), and the previous 
+          frame (old_gray) is set to the current frame's grayscale version 
+          for use in the next iteration.</li>
+  </ul>
+</li>
+</ul>
+
+
+
+
+
+    
             <!-- Results -->
     <h3 id="Results" class ="Results">Results and Conclusion</h3>
     <p class="justified">Qualitative Results: Based upon the data pre-processing techniques and the model architecture described above, the input images from the dataset were fed to this model and the output images with the predicted bounding boxes were analyzed to evaluate the model performance. Figures ___ show the bounding box predictions for a sample of test images. The bounding boxes are represented in green surrounding the detected vehicles </p>
