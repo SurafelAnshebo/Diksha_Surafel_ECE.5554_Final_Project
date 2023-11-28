@@ -224,7 +224,7 @@ figcaption {
   <div style="display: flex; justify-content: space-around; align-items: center;">
     <figure id="fig1">
         <img src="yolo_str.png" alt="Sample Input" style="width: 100%; height: auto;">
-        <figcaption>Figure 1: YoloV5 Model Description</figcaption>
+        <figcaption>Fig 1: YoloV5 Model Description</figcaption>
     </figure>
   </div>
   
@@ -239,7 +239,7 @@ figcaption {
 </p>
 <figure class="centered-image">
     <img src="deepsort_blockdiag.png" alt="Block Diagram of Deep SORT (Reference of paper https://www.hindawi.com/journals/cin/2023/7974201/fig1/ )" class="centered-image" style="width: 70%; height: auto;">
-    <figcaption>Figure 2: DeepSort Block Diagram</figcaption>
+    <figcaption>Fig 2: DeepSort Block Diagram</figcaption>
 </figure>
 
 
@@ -251,38 +251,46 @@ figcaption {
 <h4 class="justified"> Handling Lost Tracks:</h4> <p class="justified"> Sometimes, an object might be occluded or move out of the frame. Deep SORT handles this by allowing trackers to exist for a short time without new matching detections, giving the object a chance to reappear. If a tracker doesn't get a matching detection for too long, it is removed.</p>
 
 
-  <div class="justified">
-  <div style="display: flex; justify-content: space-around; align-items: center;">
-    <figure id="fig1">
-        <img src="sample_input.png" alt="Sample Input" style="width: 30%; height: auto;">
-        <figcaption>Figure 1: Sample Input</figcaption>
+<div style="display: flex; justify-content: center; align-items: center; flex-wrap: nowrap;">
+
+  <!-- First figure -->
+  <figure id="fig1" style="text-align: center; margin: 20px; max-width: 40%; flex: 1;">
+      <img src="sample_input.png" style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+      <figcaption style="text-align: center; margin-top: 10px; margin-bottom: 20px;">Fig 3: Sample Input</figcaption>
+  </figure>
+
+  <!-- Second figure -->
+  <figure id="fig2" style="text-align: center; margin: 20px; max-width: 40%; flex: 1;">
+      <img src="sample_output.png" alt="Sample Output" style="width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+      <figcaption style="text-align: center; margin-top: 10px; margin-bottom: 20px;">Fig 4: Sample Output</figcaption>
+  </figure>
+
+</div>
+
+  <div style="display: flex; justify-content: center; align-items: center; flex-wrap: nowrap;">
+
+    <!-- Figure 1 -->
+    <figure id="fig1" style="text-align: center; margin: 10px; max-width: 22%; flex: 1;">
+        <img src="img15.jpg" alt="Sample Input" style="width: 100%; height: auto;">
     </figure>
 
-    <figure id="fig2">
-        <img src="sample_output.png" alt="Sample Output" style="width: 30%; height: auto;">
-        <figcaption>Figure 2: Sample Output</figcaption>
-    </figure>
-  </div>
-
-    <div style="display: flex; justify-content: space-around; align-items: center;">
-    <figure id="fig1">
-        <img src="img15.jpg" alt="Sample Input" style="width: 30%; height: auto; margin-right: 5px;">
+    <!-- Figure 2 -->
+    <figure id="fig2" style="text-align: center; margin: 10px; max-width: 22%; flex: 1;">
+        <img src="img671.jpg" alt="Sample Output" style="width: 100%; height: auto;">
     </figure>
 
-    <figure id="fig2">
-        <img src="img671.jpg" alt="Sample Output" style="width: 30%; height: auto;">
+    <!-- Figure 3 -->
+    <figure id="fig3" style="text-align: center; margin: 10px; max-width: 22%; flex: 1;">
+        <img src="img83.jpg" alt="Sample Output" style="width: 100%; height: auto;">
     </figure>
 
-      <figure id="fig3">
-        <img src="img83.jpg" alt="Sample Output" style="width: 30%; height: auto;">
+    <!-- Figure 4 -->
+    <figure id="fig4" style="text-align: center; margin: 10px; max-width: 22%; flex: 1;">
+        <img src="img923.jpg" alt="Sample Output" style="width: 100%; height: auto;">
     </figure>
 
-      <figure id="fig4">
-        <img src="img923.jpg" alt="Sample Output" style="width: 30%; height: auto;">
-    </figure>
-  </div>
-  <figcaption style="text-align: center;">Common Caption: Overview of Dataset</figcaption>
-  </div>
+</div>
+<figcaption style="text-align: center; margin-top: 10px;">Common Caption: Overview of Dataset</figcaption>
 
   
       <p class="justified">
@@ -338,7 +346,7 @@ A github repository: https://github.com/John1liu/YOLOV5-DeepSORT-Vehicle-Trackin
     <div style="display: flex; justify-content: space-around; align-items: center;">
     <figure id="fig1">
         <img src="structure.png" alt="Sample Input" style="width: auto; height: 30%;">
-        <figcaption>Figure 1: Directory Structure for YoloV5 Dataset</figcaption>
+        <figcaption>Fig 5: Directory Structure for YoloV5 Dataset</figcaption>
     </figure>
 
     </div>
@@ -362,32 +370,37 @@ A github repository: https://github.com/John1liu/YOLOV5-DeepSORT-Vehicle-Trackin
     </ul>
   </ul>
   
-  
-  
-
   Recall:  
   https://github.com/nwojke/deep_sort
 
   </p>
-  <div class="justified">
-  <div style="display: flex; justify-content: space-around; align-items: center;">
-    <figure id="fig1">
-        <img src="P_curve.png" alt="Sample Input" style="width: 30%; height: auto; margin-right: 10px;">
-        <figcaption>Figure 1: P_curve</figcaption>
+<!-- Container for the first two figures -->
+<div class="justified">
+  <div style="display: flex; justify-content: center; align-items: center; flex-wrap: nowrap;">
+
+    <!-- Figure 1 -->
+    <figure id="fig1" style="text-align: center; margin: 20px; max-width: 45%; flex: 1;">
+        <img src="P_curve.png" alt="P curve" style="width: 100%; height: auto;">
+        <figcaption style="text-align: center; margin-top: 10px;"> Fig 6: P_curve</figcaption>
+
     </figure>
 
-    <figure id="fig2">
-        <img src="R_curve.png" alt="Sample Output" style="width: 30%; height: auto;">
-        <figcaption>Figure 2: R_curve</figcaption>
+    <!-- Figure 2 -->
+    <figure id="fig2" style="text-align: center; margin: 20px; max-width: 45%; flex: 1;">
+        <img src="R_curve.png" alt="R curve" style="width: 100%; height: auto;">
+        <figcaption style="text-align: center; margin-top: 10px;">Fig 7: R_curve</figcaption>
     </figure>
 
-    <figure id="fig2">
-        <img src="PR_curve.png" alt="Sample Output" style="width: 30%; height: auto;">
-        <figcaption>Figure 2: PR_curve</figcaption>
-    </figure>
   </div>
+</div>
 
-  </div>
+<!-- Separate container for the third figure -->
+<div class="justified" style="display: flex; justify-content: center; align-items: center;">
+  <figure id="fig3" style="text-align: center; margin: 20px; max-width: 60%; flex: 1;">
+      <img src="PR_curve.png" alt="PR curve" style="width: 100%; height: auto;">
+      <figcaption style="text-align: center; margin-top: 10px;">Fig 8: PR_curve</figcaption>
+  </figure>
+</div> 
 
 <h2 class="justified">Computer Vision Approach</h2>
 
@@ -435,7 +448,7 @@ A github repository: https://github.com/John1liu/YOLOV5-DeepSORT-Vehicle-Trackin
             </p>
             <figure id="Haar_block_diagram_text" style="text-align: center; margin-left: auto; margin-right: auto; max-width: 100%;">
               <img src="Haar_block_diagram.png" style="width: 70%; height: auto; display: block; margin-left: auto; margin-right: auto;">
-              <figcaption style="text-align: center; margin-top: 10px; margin-bottom: 20px;">Fig 1: Block diagram of HAAR CASCADE Classifier</figcaption>
+              <figcaption style="text-align: center; margin-top: 10px; margin-bottom: 20px;">Fig 9: Block diagram of HAAR CASCADE Classifier</figcaption>
           </figure>          
 
           <p>
@@ -541,27 +554,6 @@ A github repository: https://github.com/John1liu/YOLOV5-DeepSORT-Vehicle-Trackin
   </ul>
 </li>
 </ul>
-
-  <div style="display: flex; justify-content: space-around; align-items: center;">
-    <figure id="fig1">
-        <img src="car_frame_54_yolo.jpg" alt="Sample Input" style="width: 30%; height: auto; margin-right: 10px;">
-        <figcaption>Figure 1: Output Test Image 1</figcaption>
-    </figure>
-
-    <figure id="fig2">
-        <img src="car_frame_58_yolo.jpg" alt="Sample Output" style="width: 30%; height: auto;">
-        <figcaption>Figure 2: Output Test Image 3</figcaption>
-    </figure>
-
-    <figure id="fig2">
-        <img src="car_frame_62_yolo.jpg" alt="Sample Output" style="width: 30%; height: auto;">
-        <figcaption>Figure 2: Output Test Image 3</figcaption>
-    </figure>
-  </div>
-
-
-
-
     
             <!-- Results -->
     <h3 id="Results" class ="Results">Results and Conclusion</h3>
