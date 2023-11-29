@@ -699,7 +699,7 @@ figcaption {
     <!-- IOU formuala -->
     <figure id="fig1" style="text-align: center; margin: 20px; max-width: 45%; flex: 1;">
         <img src="IOU.png" alt="P curve" style="width: 100%; height: auto;">
-        <figcaption style="text-align: center; margin-top: 10px;"> Fig 12: Intersection Over Union(IOU) 
+        <figcaption style="text-align: center; margin-top: 10px;"> Fig 12: Intersection over Union(IOU) 
           description</figcaption>
 
     </figure>
@@ -707,7 +707,7 @@ figcaption {
     <!-- IOU table -->
     <figure id="fig2" style="text-align: center; margin: 20px; max-width: 45%; flex: 1;">
         <img src="IOU_table.png" alt="R curve" style="width: 100%; height: auto;">
-        <figcaption style="text-align: center; margin-top: 10px;">Fig 13: Intersection Over Union Table</figcaption>
+        <figcaption style="text-align: center; margin-top: 10px;">Fig 13: Intersection over Union Table</figcaption>
     </figure>
 
   </div>
@@ -732,8 +732,26 @@ figcaption {
     </figure>
 
 </div>
-<figcaption style="text-align: center; margin-top: 10px;">Fig 11: IoU of HAAR Cascade detection method with ground truth bounding box (blue) and predicted bounding box (yellow) </figcaption>
+<figcaption style="text-align: center; margin-top: 10px;">Fig 14: IoU of HAAR Cascade detection method with ground truth bounding box (blue) and predicted bounding box (yellow) </figcaption>
 
+    The images in Fig. 14 are taken from the video frames that were used in the training of HAAR cascade method. The ground truth bounding box is represnted by blue color and the bounding box obtained by the prediction with HAAR cascade method is shown in yellow color. As shown in the table Fig. 13, the IoU of nearly 50% is obtained for this model.
+
+
+    <h4 class="justified"> Suggested Improvements: </h4>
+
+    <ul class="justified">
+        <ul>
+            <li>
+              Haar cascade prediction can be further improved by training the model on larger dataset. To resolve the issue of scaling, image pyarmids can be used while training the model.
+            </li>
+            <li>
+              A comparison between optical flow and Deep SORT methods of tracking can be made by modifying the optical flow tracking method such that it assigns a unique ID to each vehicle. Switching ID can be used to quantitatively make such a comparison.
+            </li>
+          <li>
+            More accuracy on Deep SORT tracking can be obtained if the prediction made by kalman filtering can be improved with optical flow. 
+          </li>
+        </ul>
+    </ul>
 
                 <!-- Reference -->
     <h3 id="Reference" class ="Reference">Reference</h3>
