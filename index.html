@@ -611,7 +611,7 @@ figcaption {
     
             <!-- Results -->
     <h3 id="Results" class ="Results">Results and Conclusion</h3>
-    <p class="justified"><b>Qualitative Results:</b> Based upon the data pre-processing techniques and the model architecture described above, the input images from the dataset were fed to this model and the output images with the predicted bounding boxes were analyzed to evaluate the model performance. Figures ___ show the bounding box predictions for a sample of test images. The bounding boxes are represented in green surrounding the detected vehicles </p>
+    <p class="justified"><b>Qualitative Results:</b> Based upon the data pre-processing techniques and the model architecture described above, the input images from the dataset were fed to these models, and the output images with the predicted bounding boxes were analyzed to evaluate the model performance. Figures 10 and 11 show the bounding box predictions for a sample of test images. The bounding boxes are represented in yellow surrounding the detected vehicles </p>
 
     <br><br>
 
@@ -673,7 +673,7 @@ figcaption {
   </figure>
 
 </div>
-<figcaption style="text-align: center; margin-top: 10px;">Caption: Overview of scaling issue</figcaption>
+<figcaption style="text-align: center; margin-top: 10px;">Fig 12: Scaling issue in HAAR Cascade predictions</figcaption>
 
 
     <p class="justified">
@@ -686,7 +686,7 @@ figcaption {
 <br></br>
 <p class="justified">  <b>Quantitative Results: </b>To quantitatively evaluate the performance of the algorithm, 
   Intersection over Union (IoU) metric has been used. IoU essentially works by taking 
-  two inputs namely - ground truth bounding box and the prediction 
+  two inputs namely - the ground truth bounding box and the prediction 
   bounding box and computing the intersection and the union of the two 
   bounding boxes respectively.</p>
 
@@ -699,7 +699,7 @@ figcaption {
     <!-- IOU formuala -->
     <figure id="fig1" style="text-align: center; margin: 20px; max-width: 45%; flex: 1;">
         <img src="IOU.png" alt="P curve" style="width: 100%; height: auto;">
-        <figcaption style="text-align: center; margin-top: 10px;"> Fig 12: Intersection over Union(IOU) 
+        <figcaption style="text-align: center; margin-top: 10px;"> Fig 13: Intersection over Union(IoU) 
           description</figcaption>
 
     </figure>
@@ -707,7 +707,7 @@ figcaption {
     <!-- IOU table -->
     <figure id="fig2" style="text-align: center; margin: 20px; max-width: 45%; flex: 1;">
         <img src="IOU_table.png" alt="R curve" style="width: 100%; height: auto;">
-        <figcaption style="text-align: center; margin-top: 10px;">Fig 13: Intersection over Union Table</figcaption>
+        <figcaption style="text-align: center; margin-top: 10px;">Fig 14: Intersection over Union table</figcaption>
     </figure>
 
   </div>
@@ -732,9 +732,9 @@ figcaption {
     </figure>
 
 </div>
-<figcaption style="text-align: center; margin-top: 10px;">Fig 14: IoU of HAAR Cascade detection method with ground truth bounding box (blue) and predicted bounding box (yellow) </figcaption>
+<figcaption style="text-align: center; margin-top: 10px;">Fig 15: IoU of HAAR Cascade detection method with ground truth bounding box (blue) and predicted bounding box (yellow) </figcaption>
 
-    The images in Fig. 14 are taken from the video frames that were used in the training of HAAR cascade method. The ground truth bounding box is represnted by blue color and the bounding box obtained by the prediction with HAAR cascade method is shown in yellow color. As shown in the table Fig. 13, the IoU of nearly 50% is obtained for this model.
+    The images in Fig. 15 are obtained from the video frames that were used in the training of the HAAR cascade method. The ground truth bounding box is represented by blue color and the bounding box obtained by the prediction with the HAAR cascade method is shown in yellow color. As shown in the table Fig. 13, the IoU of nearly 50% is obtained for this model.
 
 
     <h4 class="justified"> Suggested Improvements: </h4>
@@ -742,13 +742,13 @@ figcaption {
     <ul class="justified">
         <ul>
             <li>
-              The accuracy of prediction using Haar cascade can be significantly enhanced by training the model on larger dataset. Moreover, the issue of scaling can be addressed by implementing image pyramids during training. This approach allows the model to detect objects at various scales.
+              The accuracy of prediction using the Haar cascade can be significantly enhanced by training the model on a larger dataset. Moreover, the scaling issue can be addressed by implementing image pyramids during training. This approach allows the model to detect objects at various scales.
             </li>
             <li>
-              A comparative analysis can be performed optical flow and Deep SORT tracking methods by modifying the approach used in this work. The modification involves assigning a unique ID to each vehicle and tracking each ID. Switching ID can be used to quantitatively make a comparison.
+              A comparative analysis can be performed on optical flow and Deep SORT tracking methods by modifying the approach used in this work. The modification involves assigning a unique ID to each vehicle and tracking each ID. Switching ID can be used to make a comparison quantitatively.
               </li>
           <li>
-            The accuracy of Deep SORT tracking can be further enhanced by integrating optical flow with kalman filter based prediction method. This combination can provide more precise tracking as optical flow adds an additional layer of motion analysis to the tracking process.
+            The accuracy of Deep SORT tracking can be further enhanced by integrating optical flow with the Kalman filter-based prediction method. This combination can provide more precise tracking as optical flow adds an additional layer of motion analysis to the tracking process.
              </li>
         </ul>
     </ul>
