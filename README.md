@@ -14,3 +14,7 @@ This repository contains the work for the course project **"A Comparative Study 
 
 ### **Conference Acceptance**
 This project has been accepted for presentation at the **Xponential Conference 2024**.
+
+### **Access Our Work**
+Our work can be accessed through the following link:  
+[**Diksha & Surafel's ECE 5554 Final Project**](https://surafeltesfaye.github.io/Diksha_Surafel_ECE.5554_Final_Project/)
